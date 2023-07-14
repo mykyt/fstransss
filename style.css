@@ -15,6 +15,17 @@ body {
   overflow-x: hidden;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -43,17 +54,6 @@ body {
     width: 1140px;
   }
 }
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -82,7 +82,7 @@ body {
 
 .sticky {
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); /* Apply the blur effect */
+  backdrop-filter: blur(10px); /* Apply the blur effect */
   background-color: rgba(0, 48, 82, 0.3); /* Adjust the background color and opacity */
 }
 
